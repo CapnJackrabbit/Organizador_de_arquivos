@@ -12,30 +12,30 @@ print(caminho)
 #shutil.copy2('arquivos\cert.pdf', 'arquivos_movidos\cert.pdf')         #método para copiar arquivos.
 
 for arquivo in arquivos:
-    if 'pdf' in arquivo:
-        if not os.path.isdir(caminho + 'arquivos_movidos\PDF\\'):
+    if '.pdf' in arquivo:
+        if not os.path.isdir(caminho + '\\arquivos_movidos\PDF\\'):
             os.mkdir(r"C:\Users\acemu\OneDrive\Desktop\Arquivos_python\arquivos_movidos\PDF")
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\PDF\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\PDF\{}'.format(arquivo))
         else:
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\PDF\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\PDF\{}'.format(arquivo))
     
-    elif 'jpg' in arquivo:
-        if not os.path.isdir(caminho + 'arquivos_movidos\Imagens\\'):
+    elif '.jpg' in arquivo:
+        if not os.path.isdir(caminho + '\\arquivos_movidos\Imagens\\'):
             os.mkdir(r"C:\Users\acemu\OneDrive\Desktop\Arquivos_python\arquivos_movidos\Imagens")
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\Imagens\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\Imagens\{}'.format(arquivo))
         else:
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\Imagens\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\Imagens\{}'.format(arquivo))
     
-    elif 'docx' in arquivo:
-        if not os.path.isdir(caminho + 'arquivos_movidos\Word\\'):
+    elif '.docx' in arquivo:
+        if not os.path.isdir(caminho + '\\arquivos_movidos\Word\\'):
             os.mkdir(r"C:\Users\acemu\OneDrive\Desktop\Arquivos_python\arquivos_movidos\Word")
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\Word\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\Word\{}'.format(arquivo))
         else:
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\Word\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\Word\{}'.format(arquivo))
 
-    elif 'txt' in arquivo:
-        if not os.path.isdir(caminho + 'arquivos_movidos\\Texto\\'):
+    elif '.txt' in arquivo:
+        if not os.path.isdir(caminho + '\\arquivos_movidos\Texto\\'):
             os.mkdir(r"C:\Users\acemu\OneDrive\Desktop\Arquivos_python\arquivos_movidos\Texto")
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\\Texto\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\\Texto\{}'.format(arquivo))
         else:
-            os.rename('arquivos\\'+arquivo, 'arquivos_movidos\\Texto\{}'.format(arquivo))
+            shutil.move('arquivos\\'+arquivo, 'arquivos_movidos\\Texto\{}'.format(arquivo))
