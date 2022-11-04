@@ -3,7 +3,7 @@ import os, shutil
 caminho = r'C:\\Users\\acemu\\Downloads\\'
 
 origem = r'C:\\Users\\acemu\\Downloads\\'
-destino = r'C:\\Users\\acemu\\Downloads\\Arquivos'
+destino = r'C:\\Users\\acemu\\Downloads\\'
 
 os.chdir('C:\\Users\\acemu\\Downloads')
 arquivos = os.listdir()
@@ -49,7 +49,7 @@ ext = {
 for extensao, pastas in ext.items():
     for arquivo in arquivos:
         if extensao in arquivo:
-            if not os.path.isdir(caminho + '\\Arquivos\\{}\\'.format(pastas)):
+            if not os.path.isdir(caminho + '\\{}\\'.format(pastas)):
                 print('Criando pasta ' + pastas)
                 os.mkdir(destino+'\{}'.format(pastas))
                 shutil.move(arquivo, destino+'\{}\{}'.format(pastas,arquivo))
